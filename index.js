@@ -44,6 +44,10 @@ class AlexaApp {
         },currentIntent.execute);
       }
     }.bind(this));
+    this.app.intent('AMAZON.StopIntent', function(req, res) {
+      res.say('Goodbye!');
+      res.shouldEndSession(true);
+    });
   }
 }
 
