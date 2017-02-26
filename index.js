@@ -28,7 +28,7 @@ class AlexaApp {
     this.app = new alexa.app(this.name);
     this.app.launch(function(req, res) {
         res.say('Welcome to the dungeon');
-        response.shouldEndSession(false);
+        res.shouldEndSession(false);
     });
     this.app.express(this.server, '/echo/');
   }
